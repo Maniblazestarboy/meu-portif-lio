@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Desenvolvedor Front-End</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="dropdown" data-aos="fade-right" data-aos-duration="1000">
+        <button class="cta-button dropdown-btn">
+            Menu
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">Sobre</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#projects">Projetos</a>
+            <a href="#testimonials">Depoimentos</a>
+            <a href="#contact">Contato</a>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1 class="intro-text">Olá, eu sou <span>MÁRCIO</span></h1>
+            <p class="tagline">Desenvolvedor Front-End | HTML, CSS & JavaScript</p>
+            <a href="#projects" class="cta-button">Ver Projetos</a>
+        </div>
+    </section>
+
+<!-- Seção Sobre Mim -->
+<section id="about">
+    <div class="about-container">
+        <div class="about-content" data-aos="fade-right">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p class="about-text">
+                Olá! Sou Márcio, um desenvolvedor front-end com paixão por criar interfaces 
+                modernas e funcionais. Desde que descobri o mundo da programação, me dedico a 
+                aprimorar minhas habilidades em HTML, CSS e JavaScript. Amo transformar ideias em 
+                experiências digitais únicas. Vamos construir algo incrível juntos!
+            </p>
+        </div>
+        <div class="profile-image-container" data-aos="fade-left">
+            <div class="profile-image"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Seção Habilidades -->
+<section id="skills">
+    <div class="skills-container">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+            <!-- Habilidade HTML -->
+            <div class="skill-item" data-skill-level="90">
+                <div class="skill-icon html-icon"></div>
+                <div class="skill-progress">
+                    <svg class="progress-circle">
+                        <circle class="bg-circle" cx="50" cy="50" r="45"></circle>
+                        <circle class="fg-circle" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                </div>
+                <p>HTML</p>
+            </div>
+            <!-- Habilidade CSS -->
+            <div class="skill-item" data-skill-level="80">
+                <div class="skill-icon css-icon"></div>
+                <div class="skill-progress">
+                    <svg class="progress-circle">
+                        <circle class="bg-circle" cx="50" cy="50" r="45"></circle>
+                        <circle class="fg-circle" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                </div>
+                <p>CSS</p>
+            </div>
+            <!-- Habilidade JavaScript -->
+            <div class="skill-item" data-skill-level="75">
+                <div class="skill-icon js-icon"></div>
+                <div class="skill-progress">
+                    <svg class="progress-circle">
+                        <circle class="bg-circle" cx="50" cy="50" r="45"></circle>
+                        <circle class="fg-circle" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                </div>
+                <p>JavaScript</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Seção de Projetos -->
+<section id="projects">
+    <div class="projects-container">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+            <!-- Cartão de Projeto 1 -->
+            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('link-da-imagem-1.jpg');"></div>
+                <div class="project-info">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto.</p>
+                    <a href="detalhe.html" class="project-link">Ver Detalhes</a>
+                </div>
+            </div>
+            </div>
+            <!-- Cartão de Projeto 2 -->
+            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('link-da-imagem-2.jpg');"></div>
+                <div class="project-info">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto.</p>
+                    <a href="detalhe.html" class="project-link">Ver Detalhes</a>
+                </div>
+            </div>
+            </div>
+            <!-- Cartão de Projeto 3 -->
+            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('link-da-imagem-3.jpg');"></div>
+                <div class="project-info">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto.</p>
+                    <a href="detalhe.html" class="project-link">Ver Detalhes</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Seção Depoimentos -->
+<section id="testimonials" aria-label="Seção de depoimentos">
+    <div class="testimonials-container">
+        <h2 class="section-title">Depoimentos</h2>
+        <div class="carousel" role="region" aria-label="Carrossel de depoimentos">
+            <div class="testimonial" role="tabpanel" aria-label="Depoimento 1" data-text="Márcio é um desenvolvedor extremamente dedicado. Sempre entrega resultados incríveis!"></div>
+            <div class="testimonial" role="tabpanel" aria-label="Depoimento 2" data-text="Trabalhar com o Márcio foi uma experiência fantástica. Ele é atento aos detalhes e ágil."></div>
+            <div class="testimonial" role="tabpanel" aria-label="Depoimento 3" data-text="Se você precisa de um desenvolvedor confiável, o Márcio é a escolha certa."></div>
+            
+            <div class="carousel-controls">
+                <button class="prev-btn" aria-label="Depoimento anterior">&#8249;</button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" aria-label="Depoimento 1 de 3"></span>
+                    <span class="indicator" aria-label="Depoimento 2 de 3"></span>
+                    <span class="indicator" aria-label="Depoimento 3 de 3"></span>
+                </div>
+                <button class="next-btn" aria-label="Próximo depoimento">&#8250;</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Seção Contato -->
+<section id="contact">
+    <div class="contact-container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <form id="contact-form" action="https://formspree.io/f/xgvekolr" method="POST">
+            <input type="text" id="name" name="name" placeholder="Nome" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <textarea id="message" name="message" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="form-status"></div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/m%C3%A1rcio-constantino-50432a300/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Maniblazestarboy/Maniblazestarboy" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer id="footer">
+    <div class="footer-content">
+        <p>© 2024 Márcio Guilherme - Desenvolvedor Front-End</p>
+        <p>Email: marcio.guilherme@example.com | Telefone: +244 123 456 789</p>
+        <div class="footer-social-icons">
+            <a href="https://www.linkedin.com/in/m%C3%A1rcio-constantino-50432a300/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Maniblazestarboy/Maniblazestarboy" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</footer>
+
+
+
+
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // Duração da animação em milissegundos
+        once: true,     // Anima uma única vez
+    });
+</script>
+</body>
+</html>

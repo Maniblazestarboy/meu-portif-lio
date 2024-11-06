@@ -1,0 +1,642 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+.dropdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.dropdown-btn {
+    position: relative;
+    padding-right: 35px; /* Espaço para o ícone */
+}
+
+.dropdown-btn i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.dropdown.active .dropdown-btn i {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f39c12;
+    min-width: 200px;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown.active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    color: #121212;
+    text-decoration: none;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 25px;
+}
+
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #f39c12;
+}
+
+/* Adicione isso para garantir que o dropdown fique acima de outros elementos */
+body {
+    position: relative;
+}
+
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ffd5;
+    animation: fadeIn 2s ease-out;
+}
+
+.intro-text span {
+    color: #f39c12;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+    animation: fadeIn 2.5s ease-out;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00ffd5;
+    color: #121212;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 3s ease-out;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #00ffd5;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Seção de Projetos */
+#projects {
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #00ffd5;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00ffd5;
+    margin: 8px auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cartão de Projeto */
+.project-card {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.project-card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0px 8px 20px rgba(0, 255, 213, 0.6);
+}
+
+.project-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 15px;
+    color: #fff;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #00ffd5;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #f39c12;
+}
+
+
+/* Seção Sobre Mim */
+#about {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-content {
+    flex: 1;
+    color: #fff;
+}
+
+.about-text {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.profile-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("assets/perfil\ 2\ .png.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.profile-image:hover {
+    background-image: url("assets/perfil.png.jpg"); /* Segunda imagem */
+    transform: scale(1.1);
+    filter: brightness(1.2) contrast(1.1);
+}
+
+
+/* Seção Habilidades */
+#skills {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Ícones de Habilidade */
+.skill-item {
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.html-icon { background-image: url('link-do-ícone-html.png'); }
+.css-icon { background-image: url('link-do-ícone-css.png'); }
+.js-icon { background-image: url('link-do-ícone-js.png'); }
+
+.skill-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #00ffd5;
+}
+
+/* Círculos de Progresso */
+.skill-progress {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.bg-circle {
+    fill: none;
+    stroke: #333;
+    stroke-width: 10;
+}
+
+.fg-circle {
+    fill: none;
+    stroke: #00ffd5;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1s ease;
+}
+
+/* Texto */
+.skill-item p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+
+/* Seção Depoimentos */
+#testimonials {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+}
+
+.testimonials-container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #00ffd5;
+}
+
+/* Carrossel */
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial {
+    min-width: 100%;
+    font-size: 1.2rem;
+    color: #ccc;
+    font-style: italic;
+    text-align: center;
+    display: none;
+    position: relative;
+}
+
+/* Efeito de Digitação */
+.testimonial::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 1.2em;
+    background: #00ffd5;
+    animation: blink 0.7s infinite;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Animação do Carrossel */
+@keyframes slide {
+    0%, 33% { transform: translateX(0); }
+    34%, 66% { transform: translateX(-100%); }
+    67%, 100% { transform: translateX(-200%); }
+}
+
+/* Controles do Carrossel */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.prev-btn, .next-btn {
+    background: none;
+    border: none;
+    color: #00ffd5;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    color: #fff;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #00ffd5;
+}
+
+/* Estilos para foco nos botões (acessibilidade) */
+.prev-btn:focus, .next-btn:focus {
+    outline: 2px solid #00ffd5;
+    outline-offset: 2px;
+}
+
+
+
+/* Seção Contato */
+#contact {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #00ffd5;
+}
+
+/* Formulário */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    background: #333;
+    color: #fff;
+    border: 2px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #00ffd5;
+}
+
+#contact-form input.invalid,
+#contact-form textarea.invalid {
+    border-color: #ff005d; /* Borda de neon vermelha para campos inválidos */
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #00ffd5;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #00ccaa;
+}
+
+/* Ícones de Redes Sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #00ffd5;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    transform: rotate(15deg) scale(1.1);
+    color: #ff005d;
+}
+
+
+/* Rodapé */
+#footer {
+    background-color: #1a1a1a;
+    color: #999;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-social-icons {
+    margin-top: 10px;
+}
+
+.footer-social-icons .social-icon {
+    color: #00ffd5;
+    font-size: 1.3rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-social-icons .social-icon:hover {
+    color: #ff005d;
+}
+
+/* Botão Scroll-to-Top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00ffd5;
+    color: #1a1a1a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #00ccaa;
+}
+
+/* Mostra o botão ao rolar a página */
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px); /* Leve animação para cima */
+}
+
+
+

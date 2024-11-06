@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Projeto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="project-details-wrapper">
+        <header class="project-header">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </header>
+
+        <main class="project-details">
+            <div class="project-hero" data-aos="fade-down">
+                <div class="project-title-container">
+                    <h1 class="project-title">Nome do Projeto</h1>
+                    <div class="project-status">
+                        <span class="status-dot"></span>
+                        Projeto Ativo
+                    </div>
+                </div>
+                <p class="project-tagline">Uma breve descrição do projeto em uma linha</p>
+                <div class="project-links">
+                    <a href="#" class="project-link github">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="project-link live">
+                        <i class="fas fa-external-link-alt"></i> Ver Projeto
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-showcase" data-aos="fade-right">
+                    <div class="project-image-wrapper">
+                        <img src="caminho-para-imagem-do-projeto.jpg" alt="Imagem do Projeto">
+                        <div class="image-overlay">
+                            <span class="zoom-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info" data-aos="fade-left">
+                    <div class="info-card">
+                        <h2>Sobre o Projeto</h2>
+                        <p>Descrição detalhada do projeto. Explique o problema que ele resolve, as tecnologias utilizadas e os desafios enfrentados.</p>
+                        
+                        <h3>Tecnologias Utilizadas</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                            <li><i class="fab fa-js"></i> JavaScript</li>
+                            <li><i class="fab fa-react"></i> React</li>
+                        </ul>
+
+                        <!-- https://formspree.io/f/xgvekolr -->
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Concluído</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Tecnologias</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery" data-aos="fade-up">
+                <h2>Galeria do Projeto</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="caminho-para-imagem1.jpg" alt="Imagem 1">
+                        <div class="gallery-overlay">
+                            <span class="gallery-caption">Descrição da imagem</span>
+                        </div>
+                    </div>
+                    <!-- Repita para outras imagens -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
